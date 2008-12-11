@@ -1,22 +1,14 @@
+require 'rubygems'
 require 'rake'
 require 'rake/testtask'
 require 'rake/rdoctask'
+require 'echoe'
 
-desc 'Default: run unit tests.'
-task :default => :test
-
-desc 'Test the import_with_load_data_in_file plugin.'
-Rake::TestTask.new(:test) do |t|
-  t.libs << 'lib'
-  t.pattern = 'test/**/*_test.rb'
-  t.verbose = true
-end
-
-desc 'Generate documentation for the import_with_load_data_in_file plugin.'
-Rake::RDocTask.new(:rdoc) do |rdoc|
-  rdoc.rdoc_dir = 'rdoc'
-  rdoc.title    = 'ImportWithLoadDataInFile'
-  rdoc.options << '--line-numbers' << '--inline-source'
-  rdoc.rdoc_files.include('README')
-  rdoc.rdoc_files.include('lib/**/*.rb')
+Echoe.new('import_fu', '0.1.0') do |p|
+  p.description    = "Add quick mass data import from CSV or Array to Active Record model"
+  p.url            = "http://github.com/guillaumegentil/import_fu/tree"
+  p.author         = "Thibaud Guillaume-Gentil"
+  p.email          = "guillaumegentil@gmail.com"
+  p.ignore_pattern = ["tmp/*", "script/*"]
+  p.development_dependencies = ["faster_csv", "active_record"]
 end

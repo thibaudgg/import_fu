@@ -1,0 +1,7 @@
+test:
+  adapter: mysql
+  database: import_fu_test
+  username: root
+  password: 
+  host: localhost
+  encoding: utf8
