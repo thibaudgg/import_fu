@@ -29,7 +29,7 @@ Import from an array of values
     
     Foo.import columns, values
 
-Import from a csv file (MySQL need to have access on this file, so be sure it has the proper ownership/permissions)
+Import from a csv file (MySQL needs to have access on this file, so be sure it has the proper ownership/permissions)
 
     columns = [:name, :size]
     
