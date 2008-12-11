@@ -1,7 +1,7 @@
 # ImportFu
 
 This gem adds bulk import functionality to ActiveRecord model using the fast [MySQL's 'LOAD DATA INFILE'](http://dev.mysql.com/doc/refman/5.0/en/load-data.html) feature.
-This gem code is largely inspired by the [import\_with\_load\_data\_in\_file](http://github.com/paolodona/import\_with\_load\_data\_in\_file/tree) plugin. (thanks Patrick Smith) 
+This gem code is largely inspired by the [import\_with\_load\_data\_in\_file](http://github.com/paolodona/import\_with\_load\_data\_in\_file/tree) plugin. (thanks Paolo Dona) 
 
 ## Installation
 
