@@ -2,15 +2,15 @@
 
 Gem::Specification.new do |s|
   s.name = %q{import_fu}
-  s.version = "0.1.0"
+  s.version = "0.1.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 1.2") if s.respond_to? :required_rubygems_version=
   s.authors = ["Thibaud Guillaume-Gentil"]
-  s.date = %q{2008-12-11}
+  s.date = %q{2008-12-15}
   s.description = %q{Add quick mass data import from CSV or Array to Active Record model}
   s.email = %q{guillaumegentil@gmail.com}
-  s.extra_rdoc_files = ["lib/import_fu.rb", "README"]
-  s.files = ["init.rb", "lib/import_fu.rb", "Manifest", "MIT-LICENSE", "Rakefile", "README", "test/import_fu_test.rb", "test/test_helper.rb", "import_fu.gemspec"]
+  s.extra_rdoc_files = ["lib/import_fu.rb", "README.markdown"]
+  s.files = ["import_fu.gemspec", "init.rb", "lib/import_fu.rb", "Manifest", "MIT-LICENSE", "Rakefile", "README.markdown", "test/database.yml", "test/fixtures/foos.csv", "test/import_fu_test.rb", "test/test_helper.rb"]
   s.has_rdoc = true
   s.homepage = %q{http://github.com/guillaumegentil/import_fu/tree}
   s.rdoc_options = ["--line-numbers", "--inline-source", "--title", "Import_fu", "--main", "README.markdown"]

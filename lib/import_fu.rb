@@ -58,6 +58,8 @@ module ImportFu
       case value.class.to_s
       when "Time", "Date"
         value.to_s(:db)
+      when 'NilClass'
+        'NULL'
       else
         value.to_s
       end
