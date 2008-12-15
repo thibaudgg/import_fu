@@ -10,5 +10,5 @@ Echoe.new('import_fu', '0.1.1') do |p|
   p.author         = "Thibaud Guillaume-Gentil"
   p.email          = "guillaumegentil@gmail.com"
   p.ignore_pattern = ["tmp/*", "script/*"]
-  p.development_dependencies = ["faster_csv", "active_record"]
+  p.development_dependencies = ["fastercsv", "active_record"]
 end
