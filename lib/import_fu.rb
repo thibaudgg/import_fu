@@ -1,9 +1,5 @@
 require 'fastercsv'
 
-# Adds a import_with_load_data_infile class method.
-# this lets you import data using mysql "LOAD DATA INFILE"  
-# This is about 30% faster than using ar-extensions bulk import
-# 
 # be careful, there's no validation or escaping here!
 module ImportFu
   
@@ -29,7 +25,7 @@ module ImportFu
       load_data_infile_sql = build_load_data_infile_statement(csv_path, columns, options)
       ActiveRecord::Base.connection.execute(load_data_infile_sql)
       
-      csv_tempfile.close! if csv_tempfile
+      csv_tempfile.delete if csv_tempfile
     end
     
     protected
@@ -68,9 +64,10 @@ module ImportFu
     def build_load_data_infile_statement(csv_path, columns, options = {})
       local = options[:local] ? 'LOCAL' : ''
       replace = options[:replace] ? 'REPLACE' : 'IGNORE'
+      charset = options[:charset] || 'UTF8'
       column_list = columns.map(&:to_s).join(',')
       
-      "LOAD DATA #{local} INFILE '#{csv_path}' #{replace} INTO TABLE #{table_name} FIELDS TERMINATED BY ',' ENCLOSED BY '\"' (#{column_list});"
+      "LOAD DATA #{local} INFILE '#{csv_path}' #{replace} INTO TABLE #{table_name} CHARACTER SET #{charset} FIELDS TERMINATED BY ',' ENCLOSED BY '\"' (#{column_list});"
     end
     
   end

@@ -2,11 +2,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{import_fu}
-  s.version = "0.1.1"
+  s.version = "0.1.2"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 1.2") if s.respond_to? :required_rubygems_version=
   s.authors = ["Thibaud Guillaume-Gentil"]
-  s.date = %q{2008-12-15}
+  s.date = %q{2008-12-18}
   s.description = %q{Add quick mass data import from CSV or Array to Active Record model}
   s.email = %q{guillaumegentil@gmail.com}
   s.extra_rdoc_files = ["lib/import_fu.rb", "README.markdown"]
