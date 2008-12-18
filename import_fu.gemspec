@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{import_fu}
-  s.version = "0.1.2"
+  s.version = "0.1.3"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 1.2") if s.respond_to? :required_rubygems_version=
   s.authors = ["Thibaud Guillaume-Gentil"]
@@ -26,13 +26,13 @@ Gem::Specification.new do |s|
 
     if Gem::Version.new(Gem::RubyGemsVersion) >= Gem::Version.new('1.2.0') then
       s.add_development_dependency(%q<fastercsv>, [">= 0"])
-      s.add_development_dependency(%q<active_record>, [">= 0"])
+      s.add_development_dependency(%q<activerecord>, [">= 0"])
     else
       s.add_dependency(%q<fastercsv>, [">= 0"])
-      s.add_dependency(%q<active_record>, [">= 0"])
+      s.add_dependency(%q<activerecord>, [">= 0"])
     end
   else
     s.add_dependency(%q<fastercsv>, [">= 0"])
-    s.add_dependency(%q<active_record>, [">= 0"])
+    s.add_dependency(%q<activerecord>, [">= 0"])
   end
 end
